@@ -57,7 +57,7 @@ const config = {
                 },
                 async: {
                     priority: -30,
-                    name: 'aCommon',
+                    name: 'asyncCommon',
                     minSize: 0,
                     minChunks: 2,
                     maxAsyncRequests: 3,
@@ -74,7 +74,10 @@ const config = {
     },
     plugins: [
         // 模块命名插件，防止新增模块时，由于模块id的变化导致内容未变化chunk产生新的hash
-        new webpack.NamedModulesPlugin()
+        new webpack.NamedModulesPlugin(),
+        // new webpack.HashedModuleIdsPlugin(), // 也可以用这个
+
+        new webpack.ProgressPlugin()
     ]
 }
 /* const config = {
