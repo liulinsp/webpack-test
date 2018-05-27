@@ -28,7 +28,7 @@ const config = {
       },
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'render',
+      name: 'vendor',
       chunks: ['a', 'b'],
       children: false,
       minChunks: function (module, count) {
