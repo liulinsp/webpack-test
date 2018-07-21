@@ -1,5 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
+const modulesValues = require('postcss-modules-values')
 
 let config = {
     entry: {
@@ -14,30 +15,19 @@ let config = {
         rules: [
             {
                 test: /\.css$/,
-                // use:['style-loader', 'css-loader']
                 use: [
                     {
-                        loader: 'style-loader',
-                        options: {
-                            sourceMap: true
-                        }
+                        loader: 'style-loader'
                     },
-                    'css-loader'
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            import: true // 默认为true, 处理css中的@import 'XXX.css'
+                        }
+                    }
                 ]
             }
         ]
-        /* rules: [
-            {
-                test: /\.css$/,
-                use:['style-loader/url', 'file-loader']
-            }
-        ] */
-        /*rules: [
-            {
-                test: /\.css$/,
-                use:['style-loader/useable', 'css-loader']
-            }
-        ]*/
     },
     optimization: {
         minimize: false

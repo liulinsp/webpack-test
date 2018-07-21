@@ -1,0 +1,25 @@
+@value colors: "./colors.css";
+@value blue, red, green from colors;
+
+.borderBox{
+    /* 继承其他模块 */
+    composes: box from './base.css';
+    border: 4px solid #c2ffc8;
+}
+/*全局作用域， 不会被编译成hash*/
+:global(.title){
+    color: #e2e27b;
+    font-size: 28px;
+    text-align: center;
+    line-height: 100px;
+    text-shadow: 0 2px 2px #000;
+}
+.red{
+    background-color: red; /* 使用了变量red */
+}
+.blue{
+    background-color: blue; /* 使用了变量blue */
+}
+.green{
+    background-color: green; /* 使用了变量green */
+}

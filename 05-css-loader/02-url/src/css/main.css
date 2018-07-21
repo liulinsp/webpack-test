@@ -1,0 +1,6 @@
+.ball{
+    width: 142px;
+    height: 142px;
+    background: url('../img/ball.png') no-repeat;
+    background-size: contain;
+}

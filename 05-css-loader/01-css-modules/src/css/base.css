@@ -1,0 +1,11 @@
+html, body{
+    padding: 0;
+    margin: 0;
+}
+.box{
+    width: 500px;
+    height: 350px;
+    margin: 40px auto;
+    border-radius: 20px;
+    background-color: #84b5f1;
+}
