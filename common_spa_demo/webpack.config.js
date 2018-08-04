@@ -27,10 +27,13 @@ module.exports = {
             minChunks: function (module, count) {
                 console.log('module---------------------', module.resource)
                 console.log('count-----------------------', count)
-                if(module.resource.indexOf('c.js') > -1){
-                    console.log('true')
-                    return true
-                }
+                return (
+                    module.resource &&
+                    /\.js$/.test(module.resource) &&
+                    module.resource.indexOf(
+                        path.join(__dirname, '../node_modules')
+                    ) === 0
+                )
             }
         }),
         new webpack.optimize.CommonsChunkPlugin({

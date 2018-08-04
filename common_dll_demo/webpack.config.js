@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 // dll 构建
-/*module.exports = {
+module.exports = {
     name: "vendor",
     entry: {
         vendor: ['./src/c.js', './src/cc.js']
@@ -19,10 +19,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
             path: path.resolve(__dirname, "public/manifest.json")
         })
     ]
-}*/
+}
 
 // 应用构建
-module.exports = {
+/*module.exports = {
     name: "app",
     dependencies: ["vendor"],
     entry: {
@@ -47,5 +47,5 @@ module.exports = {
             template: 'index.html'
         })
     ]
-}
+}*/
 

@@ -1,0 +1,11 @@
+.border-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border: solid 2px #d4c33e;
+    transform: translate(200px, 200px);
+    background: linear-gradient(90deg, #e2e27b, #e2b57e);
+}
