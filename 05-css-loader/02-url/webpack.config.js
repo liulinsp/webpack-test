@@ -1,6 +1,5 @@
 const path = require('path')
 const webpack = require('webpack')
-const modulesValues = require('postcss-modules-values')
 
 let config = {
     entry: {
