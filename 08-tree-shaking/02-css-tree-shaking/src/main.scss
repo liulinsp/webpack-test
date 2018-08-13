@@ -1,0 +1,18 @@
+$bgColor: #e2e27b;
+$box-size: 342px;
+
+.border-box{
+  border-radius: 10px;
+  border: solid 2px #d4c33e;
+}
+
+.box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: $box-size;
+  height: $box-size;
+  line-height: $box-size;
+  background-color: $bgColor;
+}
